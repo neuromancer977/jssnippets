@@ -7,7 +7,6 @@ function Car(model, year, miles){
   };
 }
  
- 
 var civic = new Car("Honda Civic", 2009, 20000);
 var mondeo = new Car("Ford Mondeo", 2010, 5000);
 
