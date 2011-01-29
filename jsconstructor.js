@@ -1,5 +1,5 @@
 // custom constrution function (PATTERN)
-function Car(model, year, miles){ 
+var Car = function(model, year, miles){ 
    this.model = model;  // attenzione all'uso di this, non
    this.year    = year; // non e' il this di java (vedi sotto)
    this.miles  = miles;
