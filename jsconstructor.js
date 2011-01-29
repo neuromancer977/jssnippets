@@ -1,4 +1,5 @@
-function Car(model, year, miles){
+// custom constrution function
+function Car(model, year, miles){ 
    this.model = model;
    this.year    = year;
    this.miles  = miles;
