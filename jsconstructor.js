@@ -1,5 +1,5 @@
 // custom constrution function (PATTERN)
-var Car = function(model, year, miles){ 
+var Car = function(model, year, miles){
    this.model = model;  // attenzione all'uso di this, non
    this.year    = year; // non e' il this di java (vedi sotto)
    this.miles  = miles;
@@ -7,7 +7,7 @@ var Car = function(model, year, miles){
      console.log(this.model);
   };
 }
- 
+
 var civic = new Car("Honda Civic", 2009, 20000); // se dimantico la new =>
 var mondeo = new Car("Ford Mondeo", 2010, 5000); // disastro (per via del this)
 
@@ -17,10 +17,10 @@ mondeo.whatCar();
 
 // alternativa
 // self invoking constructor (PATTERN)
-var Car1 = function(model, year, miles){ 
+var Car1 = function(model, year, miles){
   if (this instanceof Car1) {
      this.model = model;  // alternativamente uso that come workaround
-     this.year    = year; // 
+     this.year    = year; //
      this.miles  = miles;
      this.whatCar = function(){
        console.log(this.model);
