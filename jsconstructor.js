@@ -17,8 +17,8 @@ mondeo.whatCar();
 
 // alternativa
 // self invoking constructor (PATTERN)
-var Car1 = function(model, year, miles){
-  if (this instanceof Car1) {
+var Car = function(model, year, miles){
+  if (this instanceof Car) {
      this.model = model;  // alternativamente uso that come workaround
      this.year    = year; //
      this.miles  = miles;
@@ -26,12 +26,15 @@ var Car1 = function(model, year, miles){
        console.log(this.model);
      };
   } else {
-   return new Car1(model, year, miles);
+   return new Car(model, year, miles);
   }
 }
 
-var civic1 = new Car1("Honda Civic1", 2010, 30000); // se dimantico la new =>
-var mondeo1 = Car1("Ford Mondeo1", 2011, 6000); // OK
+var civic1 = new Car("Honda Civic1", 2010, 30000); // se dimantico la new =>
+var mondeo1 = Car("Ford Mondeo1", 2011, 6000); // OK
+var mondeo2 =  Object.create(Car("Ford Mondeo2", 2011, 6000));
 
 civic1.whatCar();
 mondeo1.whatCar();
+mondeo2.whatCar();
+
