@@ -1,4 +1,4 @@
-var sum = function () {
+var sum = function (arguments) {
     var i, sum = 0;
     for (i = 0; i < arguments.length; i += 1) {
         sum += arguments[i];  // contiene un array-like con tutti gli argomenti
